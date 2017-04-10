@@ -1,0 +1,98 @@
+<!-- Week2 Challenge: Build the Collections View
+It seems that this page is completely missing, and we're not sure what to
+do about it. If you're looking for a challenge, fix this page and make it
+nice. Remember that the purpose of the page is to render a collection of
+Twitter profiles that were saved in a database. If you want to learn more,
+remember you can visit femto.cs.dal.ca/profileGrabber any time.-->
+
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css using the same CDN as index.html-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <!-- The nav div is the navbar. Make sure this is right... seems like the
+    links are broken and the color is wrong. You can find the broken links in the
+    href="" for each li or the logo -->
+    <nav class="purple darken-4">
+      <div class="nav-wrapper container">
+        <a href="/profileGrabber/" class="brand-logo">Twitter Profiler</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="collection.html">Collection</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="collection.html">Collection</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="margin-top:40px;">
+ 	<ul class="collapsible" data-collapsible="accordion">
+    	<li>
+    		<div class="collapsible-header"><i class="material-icons">filter_drama</i>realDonalTrump</div>
+    		<div class="collapsible-body"><p>This is the type of thing Donald would tweet.</p></div>
+    		<div class="collapsible-body"><p>This is the type of thing Donald would tweet another day.</p></div>
+  		</li>
+  		<li>
+    		<div class="collapsible-header"><i class="material-icons">filter_drama</i>fakeDonalTrump</div>
+    		<div class="collapsible-body"><p>I promise I am the real Donald Trump.</p></div>
+  		</li>
+  	</div>     
+      
+    </div>
+    <!-- Materialize has a special footer tag that renders a nice-looking footer.
+    This looks fine for now. When we bring these into Django we should keep this
+    one template that is used by all the pages, rather than rewriting it each time.-->
+    <footer class="page-footer purple darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Part of the Shiftkey-py Tutorial</h5>
+                <p class="grey-text text-lighten-4">Shiftkey-py is a free tutorial run at Shiftkey Labs at Dalhousie University in Halifax, Canada. Visit the Github repo or Shiftkey site for more information. </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="http://shiftkeylabs.ca/">Shiftkey Labs</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/cdconrad/shiftkey-py">Github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            (c) 2017 Jenny Farbstein learns to Python
+            <a class="grey-text text-lighten-4 right"> Contact Me @FarbyPython</a>
+            </div>
+          </div>
+        </footer>
+    <!-- Ah, the REAL end of our HTML doc. This is a critical region... materialize
+    will not work without JQuery. Here is where we must add the JQuery CDN in
+    order for Materialize to render its cool features. Note how it is sandwiched
+    between <script> tags. Try adding src = "https://code.jquery.com/jquery-2.1.1.min.js".
+    Also, the materialize JS document is referenced in the footer here-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!-- Currently our modal does not work. We need to add some custom javascript
+    for this. check out http://materializecss.com/modals.html-->
+    <script>
+      $(document).ready(function(){
+        $('.modal').modal();
+        //We are missing two things. The code for the sideNav is written below.
+        //We also need to add something for the modal.
+        //$(".button-collapse").sideNav();
+      });
+    </script>
+  </body>
+</html
+
+

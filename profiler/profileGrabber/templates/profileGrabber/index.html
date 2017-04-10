@@ -1,0 +1,46 @@
+{% extends "profileGrabber/template.html" %}
+
+{% block content %}
+
+{% load static %}
+
+      
+      <h3 style="margin-bottom: 50px;">Welcome to your latest procrastination fix.</h3>
+      <div class="row">
+        <div class="col m6">
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header active"><i class="material-icons">info_outline</i>Welcome to ProfileGrabber</div>
+              <div class="collapsible-body"><p>ProfileGrabber is a WebApp built using Python Django. It makes use of html/css and shows us how data mining can be applied to social media.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Expand Your Network</div>
+              <div class="collapsible-body"><p>Now that you are here, feel free to check out ProfileGrabber's functionality. Find twitter users, understand their influence and add the to your own list to keep track of your activity. Hit the + icon in the Discover tab to add a user to your Collection.</p></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">grade</i>Go forth and waste time</div>
+             
+          </ul>
+        </div>
+        <div class="col m6">
+          <img class="bird" style="width: 100%; display: block; margin-left: auto; margin-right: auto;" src="{% static 'dank.jpeg' %}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col m4" style="text-align: center;">
+          <i class="large material-icons">perm_identity</i>
+          <h5>Discover twitter profiles<h5>
+        </div>
+        <div class="col m4 icon-prievew" style="text-align: center;">
+          <i class="large material-icons">group_work</i>
+          <h5>Add profiles to a list<h5>
+        </div>
+        <div class="col m4" style="text-align: center;">
+          <i class="large material-icons">done</i>
+          <h5>Learn the Django stack!</h5>
+        </div>
+      </div>
+      </div>
+
+
+   {% endblock %}
